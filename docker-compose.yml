@@ -10,3 +10,4 @@ services:
         devices:
             - /dev/bus/usb:/dev/bus/usb
         tty: true
+        restart: always
