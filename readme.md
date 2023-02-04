@@ -1,6 +1,9 @@
 # rtl-sdr on Docker
-
-## デプロイ
+## サーバ側
+- RTL-SDR.COM V3を挿入
+- 本レポジトリをclone
+- rtl-sdr.rulesをコピー
+    `$ curl https://github.com/osmocom/rtl-sdr/blob/master/rtl-sdr.rules > conf-files/rtl-sdr.rules`
 - blacklist-rtlsdr.conf をホスト側の /etc/modprobe.d/ へ  
     `sudo mv conf-files/blacklist-rtlsdr.conf /etc/modprobe.d/`
 - rtl-sdr.rules をホスト側の /etc/udev/ へ  
@@ -9,4 +12,4 @@
     `docker-compose up -d`
 
 ## ホスト側
-SDR# でアクセス 
+SDR# で`サーバIP:1234`へアクセス 
